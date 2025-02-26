@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "description": "Description 1",
+      "price": 100,
+      "category": "Category 1"
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "description": "Description 2",
+      "price": 200,
+      "category": "Category 2"
+    },
+    {
+      "id": "3",
+      "name": "Acer",
+      "description": "Acer nitro",
+      "price": 300,
+      "category": "Notebook"
+    },
+    {
+      "id": "fe3e",
+      "name": "Macbook Pro",
+      "description": "Novo MacBook M3",
+      "price": "150",
+      "category": "Notebook"
+    }
+  ]
+}
