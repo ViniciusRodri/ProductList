@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 

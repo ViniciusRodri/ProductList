@@ -1,4 +1,3 @@
-// src/context/ProductContext.js
 import React, { createContext, useReducer, useContext } from "react";
 
 const ProductContext = createContext();

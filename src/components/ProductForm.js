@@ -1,21 +1,19 @@
-// src/components/ProductForm.js
 import React, { useState } from "react";
 
 const ProductForm = ({ onSubmit, initialProduct = {}, onClose }) => {
   const [product, setProduct] = useState(initialProduct);
-  const [errors, setErrors] = useState({}); // Estado para armazenar erros de validação
+  const [errors, setErrors] = useState({}); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Validação específica para o campo de preço
     if (name === "price") {
       const priceValue = parseFloat(value);
       if (priceValue < 0) {
         setErrors({ ...errors, price: "O preço não pode ser negativo." });
-        return; // Impede a atualização do estado se o valor for negativo
+        return; 
       } else {
-        setErrors({ ...errors, price: null }); // Limpa o erro se o valor for válido
+        setErrors({ ...errors, price: null }); 
       }
     }
 
@@ -25,14 +23,13 @@ const ProductForm = ({ onSubmit, initialProduct = {}, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validação final antes de enviar o formulário
     if (product.price < 0) {
       setErrors({ ...errors, price: "O preço não pode ser negativo." });
       return;
     }
 
     onSubmit(product);
-    onClose(); // Fecha o modal após o envio
+    onClose(); 
   };
 
   return (
@@ -68,7 +65,7 @@ const ProductForm = ({ onSubmit, initialProduct = {}, onClose }) => {
           placeholder="Preço"
           className="w-full p-2 border rounded"
           required
-          min="0" // Define o valor mínimo como 0
+          min="0" 
         />
         {errors.price && (
           <p className="text-red-500 text-sm mt-1">{errors.price}</p>
